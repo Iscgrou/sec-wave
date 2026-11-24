@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="institutional"] {
+  --ps-bg-canvas: #0F172A;
+  --ps-bg-surface: #141E33;
+  --ps-bg-elevated: #1A263F;
+  --ps-bg-muted: #1E293B;
+  --ps-border-hairline: #273449;
+  --ps-border-strong: #3B4B66;
+
+  --ps-text-primary: #E2E8F0;
+  --ps-text-secondary: #94A3B8;
+  --ps-text-muted: #7C8CA3;
+
+  --ps-accent-primary: #38BDF8;
+  --ps-bullish: #22C55E;
+  --ps-bearish: #EF4444;
+  --ps-warning: #F59E0B;
+  --ps-info: #60A5FA;
+  --ps-veto: #F87171;
+  --ps-freeze: #FB923C;
+}
+
+[data-theme="okabe-ito"] {
+  --ps-bg-canvas: #12151C;
+  --ps-bg-surface: #181C26;
+  --ps-bg-elevated: #1F2533;
+  --ps-bg-muted: #242B3A;
+  --ps-border-hairline: #2E3748;
+  --ps-border-strong: #435068;
+
+  --ps-text-primary: #E6E9EF;
+  --ps-text-secondary: #A3AEC2;
+  --ps-text-muted: #8491A7;
+
+  --ps-accent-primary: #56B4E9;
+  --ps-bullish: #009E73;
+  --ps-bearish: #D55E00;
+  --ps-warning: #E69F00;
+  --ps-info: #56B4E9;
+  --ps-veto: #CC79A7;
+  --ps-freeze: #F0E442;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--ps-bg-canvas);
+  color: var(--ps-text-primary);
+  font-family: "Vazirmatn", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+.num-ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums lining-nums slashed-zero;
+  letter-spacing: -0.01em;
+}
+
+.persian-copy {
+  letter-spacing: 0;
+  line-height: 1.65;
+}
+
+/* Thin subtle scrollbar only inside bounded panels */
+.ps-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ps-border-strong) transparent;
+}
+
+.ps-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ps-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ps-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--ps-border-strong);
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Payam Sovereign",
+  "description": "ایستگاه فرماندهی نهادی سیگنال‌دهی، اعتبارسنجی بصری و مدیریت چرخه عمر پوزیشن دستی برای ۵ دارایی با شورای ۳۸ ایجنتی و ۷ ناوردای سخت ریسک.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
